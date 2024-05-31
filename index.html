@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+        <div class="inicio">
+            <h1>motos</h1>
+            <a href="#contato">contato</a>
+            <input type="search" placeholder="pesquisar">
+            <button onclick="on()">search</button>
+            
+        </div>
+        
+        <div class="pecas">
+            <div class="pecas1">
+               <h1>freio</h1>
+               <img src="https://picsum.photos/150">
+               <p>preço R$50,00 <del>R$55,00</del></p>
+            </div>
+               <div class="pecas2">
+                <h1>motor</h1>
+                <img src="https://picsum.photos/151">
+                <p>preço R$40,00 <del>R$44,00</del></p>
+               </div>
+               <div class="pecas3">
+                <h1>Freio c</h1>
+                <img src="https://picsum.photos/149">
+                <p>preço R$40,00 <del>R$44,00</del></p>
+               </div>
+               </div>
+               <div id="contato">
+                 telefone: <p><strong>85 99******</strong></p>
+               </div>
+    
+        
+    </body>
+    <style>
+    #contato{
+      text-align: center;
+      font-size: 20px;
+    }
+        .inicio{
+           background: #333;
+           text-align: center;
+           color:#fff;
+           position: fixed;
+            width: 100%;
+         margin-left: -10px;
+         margin-top: -120px;
+         height: 80px;
+        }
+        .pecas1{
+           background: #333;
+          color: #fff;
+           width: 180px;
+           height: 280px;
+            margin-top: 120px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 20px 20px 20px rgba(0,0,0,0.5);
+            margin-left: 90px;
+        }
+        .pecas3{
+           background: #333;
+          color: #fff;
+           width: 180px;
+           height: 280px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 20px 20px 20px rgba(0,0,0,0.5);
+            margin-left: 90px;
+        }
+        .pecas2{
+          background: #333;
+          color: #fff;
+           width: 180px;
+           height: 280px;
+            margin-top: 110;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 20px 20px 20px rgba(0,0,0,0.5);
+            margin-left: 90px;
+        }
+        input{
+            outline-color: black;
+            border-radius: 10px;
+            height: 30px;
+            width: 210px;
+        }
+        button{
+        border-radius: 10px;
+        height: 28px;
+        color: #fff;
+        background: orange;
+        }
+        .pecas{
+          margin-top: 110px;
+        }
+        img{
+          border-radius: 10px;
+          border:1px solid #777;
+        }
+        a{
+          text-decoration: none;
+          font-size: 20px;
+          color:#333;
+        }
+        .pecas1:hover{
+       transform: scale(1.1);
+          transition: 1s;
+        }
+        .pecas2:hover{
+          transform: scale(1.1);
+          transition: 1s;
+        }
+        .pecas3:hover{
+          transform: scale(1.1);
+          transition: 1s;
+        }
+    </style>
+    <script>
+        function on(){
+            let input = document.querySelector("input").value
+            var freio = document.querySelector(".pecas1")
+            var motor = document.querySelector(".pecas2")
+            if(input == "Freio"){
+                motor.style.display = "none"
+            }else if(input == "Motor"){
+               freio.style.display = "none"
+            }
+            if(input === ""){
+                motor.style.display = "block"
+                freio.style.display = "block"
+                alert("pesquise")
+                alert("ex: Freio ou Motor")
+            }
+        }
+        
+    </script>
+
+</html>
